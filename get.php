@@ -1,7 +1,8 @@
 <?php
 // http://localhost:8080/get.php?name=supriadi
+// http://localhost:8080/get.php?name=<script>alert('Anda di Hack')</script>
 
-$say = "Hello " . $_GET['name'];
+$say = "Hello " . htmlspecialchars($_GET['name']);
 ?>
 <html>
 <body>
